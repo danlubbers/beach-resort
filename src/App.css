@@ -111,6 +111,8 @@ h6 {
   font-size: 1.5rem;
   color: var(--primaryColor);
 }
+
+/* This is for handleToggle */
 .nav-links {
   height: 0;
   overflow: hidden;
@@ -132,6 +134,7 @@ h6 {
   color: var(--primaryColor);
 }
 
+/* This is for handleToggle */
 .show-nav {
   height: 100px;
 }
