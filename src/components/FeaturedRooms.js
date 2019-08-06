@@ -12,7 +12,7 @@ export default class FeaturedRooms extends Component {
         // Destructure off the context to get the object off state in context.js
         // const {name, greeting} = this.context;
         let { loading, featuredRooms: rooms} = this.context;
-        console.log(rooms)
+        // console.log(rooms)
         rooms = rooms.map(room => {
             return <Room key={room.id} room={room} />
         })
