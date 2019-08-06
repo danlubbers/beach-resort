@@ -40,12 +40,22 @@ class RoomProvider extends Component {
         return tempItems;
     }
 
+    getRoom = slug => {
+        // Use the spread operator to get everything in the array of rooms
+        let tempRooms = [...this.state.rooms]
+        // Find, finds the first match and is an Object, whereas filter finds all matches and returns an array
+        const room = tempRooms.find((room) => room.slug === slug)
+        return room;
+    }
 
     render() {
         return (
             // Use Two sets of curly braces to pass an Object
             // {{...this.state}} is using the spread operator to access all the properties on the object
-            <RoomContext.Provider value={{...this.state}}>
+            <RoomContext.Provider value={{
+                    ...this.state,
+                    getRoom: this.getRoom
+                }}>
                 {this.props.children}
             </RoomContext.Provider>
                 
