@@ -65,5 +65,15 @@ class RoomProvider extends Component {
 }
 
 const RoomConsumer = RoomContext.Consumer
+
+// Higher Order Component: functino within a function
+export function withRoomConsumer(Component) {
+    return function ConsumerWrapper(props) {
+        return <RoomConsumer>
+            {value => <Component {...props} context={value}/>}
+        </RoomConsumer>
+    }
+}
+
 // RoomProvider is being exported to index.js to wrap <Router> and <App>
 export{ RoomProvider, RoomConsumer, RoomContext };
