@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import defaultBcg from '../images/room-1.jpeg';
-import Hero from '../components/Hero'
+// import Hero from '../components/Hero'
 import Banner from '../components/Banner'
 import { Link } from 'react-router-dom'
 import { RoomContext } from '../context'
 import StyledHero from '../components/StyledHero'
-import Room from '../components/Room';
+// import Room from '../components/Room';
 
 export default class SingleRoom extends Component {
     constructor(props) {
